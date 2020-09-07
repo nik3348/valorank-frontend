@@ -1,12 +1,12 @@
 <template>
-  <b-row class="stats" align-v="center">
+  <b-row class="stats-card" align-v="center">
     <img class="agentIcon" :src="require('../assets/agents/' + agent.name + '.png')" alt="agent">
     <b-col class="name p-0">
       {{ capitalizeFirstLetter(agent.name) }}
       <br>
       <span v-bind:title="'Avg Combat Score'">
           {{ agent.combatScore }}
-        </span>
+      </span>
     </b-col>
     <b-col class="p-0">
       {{ getKDAR(agent) }} : 1 KDA
@@ -25,11 +25,6 @@
 export default {
   name: 'AgentCard',
   props: ['agent'],
-  data () {
-    return {
-      hello: 1
-    }
-  },
   methods: {
     getKDAR: function (agent) {
       return Math.round(((agent.kills + agent.assists) / agent.deaths) * 100) / 100
@@ -49,13 +44,13 @@ export default {
   width: 55px;
   margin: 5px;
 }
-.stats {
+.stats-card {
   background-color: lightgray;
   text-align: center;
   font-size: 15px;
   width: 340px;
   border-style: groove;
-  margin: 2px 0;
+  margin: 1px 0;
 }
 .name {
   text-align: start;

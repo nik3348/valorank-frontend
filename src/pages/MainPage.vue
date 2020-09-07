@@ -1,11 +1,11 @@
 <template>
   <b-row>
-    <b-col>
+    <b-col md="auto" class="pr-0">
       <RankCard/>
       <AgentList/>
     </b-col>
-    <b-col>
-      <H2>Hello World</H2>
+    <b-col class="pl-0">
+      <GameList/>
     </b-col>
   </b-row>
 </template>
@@ -13,12 +13,14 @@
 <script>
 import AgentList from '../components/AgentList'
 import RankCard from '../components/RankCard'
+import GameList from '../components/GameList'
 
 export default {
   name: 'MainPage',
   components: {
     AgentList,
-    RankCard
+    RankCard,
+    GameList
   }
 }
 </script>

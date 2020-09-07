@@ -1,6 +1,6 @@
 <template>
   <b-col>
-      <AgentCard v-bind:agent="agent" v-for="agent in agentList" v-bind:key="agent.name"/>
+    <AgentCard v-bind:agent="agent" v-for="agent in agentList" v-bind:key="agent.name"/>
   </b-col>
 </template>
 
@@ -80,7 +80,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
