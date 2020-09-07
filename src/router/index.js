@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import RankCard from '../components/RankCard'
-import AgentStats from '../components/AgentStats'
 import MainPage from '../pages/MainPage'
+import AgentList from '../components/AgentList'
 
 Vue.use(Router)
 
@@ -20,8 +20,8 @@ export default new Router({
     },
     {
       path: '/agent',
-      name: 'AgentStats',
-      component: AgentStats
+      name: 'AgentList',
+      component: AgentList
     }
   ]
 })
