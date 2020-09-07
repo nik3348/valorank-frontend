@@ -1,13 +1,15 @@
 <template>
   <b-col>
-    <b-row class="stats" align-v="center" v-for="agent in agents" v-bind:key="agent.id">
+    <b-row class="stats" align-v="center" v-for="agent in agentList" v-bind:key="agent.name">
       <img class="agentIcon" :src="require('../assets/agents/' + agent.name + '.png')" alt="agent">
       <b-col class="name p-0">
-        {{ agent.name }}
+        {{ capitalizeFirstLetter(agent.name) }}
         <br>
-        {{ agent.combatScore }}
+        <span v-bind:title="'Avg Combat Score'">
+          {{ agent.combatScore }}
+        </span>
       </b-col>
-      <b-col class="p-0" >
+      <b-col class="p-0">
         {{ getKDAR(agent) }} : 1 KDA
         <br>
         {{ agent.kills }} / {{ agent.deaths }} / {{ agent.assists }}
@@ -28,34 +30,58 @@ export default {
     return {
       agents: [
         {
-          id: 1,
           name: 'phoenix',
-          kills: 10,
-          deaths: 10,
-          assists: 10,
-          wins: 5,
-          loses: 1,
-          combatScore: 3000
+          kills: 32,
+          deaths: 15,
+          assists: 12,
+          wins: 40,
+          loses: 32,
+          combatScore: 3256
         },
         {
-          id: 2,
           name: 'jett',
-          kills: 6.6,
-          deaths: 3.8,
-          assists: 5.7,
+          kills: 25,
+          deaths: 22,
+          assists: 13,
           wins: 1222,
-          loses: 1,
-          combatScore: 2000
+          loses: 922,
+          combatScore: 3642
         },
         {
-          id: 3,
           name: 'brimstone',
-          kills: 6.6,
-          deaths: 3.8,
-          assists: 5.7,
+          kills: 28,
+          deaths: 20,
+          assists: 11,
           wins: 5,
           loses: 1,
-          combatScore: 2350
+          combatScore: 3550
+        },
+        {
+          name: 'omen',
+          kills: 26,
+          deaths: 22,
+          assists: 8,
+          wins: 3,
+          loses: 1,
+          combatScore: 3456
+        },
+        {
+          name: 'killjoy',
+          kills: 24,
+          deaths: 28,
+          assists: 18,
+          wins: 3,
+          loses: 1,
+          combatScore: 2988
+        },
+        {
+          name: 'sova',
+          kills: 15,
+          deaths: 8,
+          assists: 15,
+          wins: 1,
+          loses: 0,
+          combatScore: 3305
         }
       ]
     }
@@ -66,30 +92,36 @@ export default {
     },
     getWinRatio: function (agent) {
       return Math.round((agent.wins * 100 / (agent.loses + agent.wins)) * 10) / 10
+    },
+    capitalizeFirstLetter (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
+    }
+  },
+  computed: {
+    agentList () {
+      let response = this.agents
+      return response.sort(function (a, b) { return (b.wins + b.loses) - (a.wins + a.loses) })
     }
   }
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
 .agentIcon {
   width: 55px;
   margin: 5px;
 }
+
 .stats {
   background-color: lightgray;
   text-align: center;
   font-size: 15px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
   width: 340px;
   border-style: groove;
   margin: 2px 0;
 }
+
 .name {
   text-align: start;
 }
-
 </style>

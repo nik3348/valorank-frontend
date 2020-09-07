@@ -1,5 +1,5 @@
 <template>
-  <div class='card'>
+  <div class='rankCard'>
     <b-row align-v="center">
       <img class="rankImage" :src="require('../assets/ranks/' + rank + '.png')" alt="rank">
       <b-col>
@@ -17,10 +17,10 @@ export default {
   name: 'RankCard',
   data () {
     return {
-      rankMsg: 'Diamond 1',
-      rank: 'diamond-1',
-      wins: 20,
-      loses: 10
+      rankMsg: 'Radiant',
+      rank: 'radiant',
+      wins: 974,
+      loses: 952
     }
   },
   methods: {
@@ -32,19 +32,17 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
-.card {
+.rankCard {
+  margin: 0 15px;
   background-color: lightgray;
   text-align: start;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  width: 275px;
+  width: 340px;
   border-style: groove;
 }
 .rankImage {
-  margin-left: 15px;
-  padding: 19px 0 19px 15px;
+  margin-left: 26px;
+  margin-right: 10px;
+  padding: 19px 5px 19px 15px;
   height: 130px;
 }
 .gamemode {
