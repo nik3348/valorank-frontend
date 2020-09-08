@@ -1,23 +1,32 @@
 <template>
-  <b-row>
-    <b-col cols="2" md="auto" class="pr-1 pl-5">
-      <RankCard/>
-      <AgentList/>
-    </b-col>
-    <b-col class="pl-1 pr-5">
-      <GameList/>
-    </b-col>
-  </b-row>
+  <b-col>
+    <b-row>
+      <b-col class="px-4">
+        <ProfileCard/>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col cols="2" md="auto" class="pr-1 pl-4">
+        <RankCard/>
+        <AgentList/>
+      </b-col>
+      <b-col class="pl-1 pr-4">
+        <GameList/>
+      </b-col>
+    </b-row>
+  </b-col>
 </template>
 
 <script>
 import AgentList from '../components/AgentList'
 import RankCard from '../components/RankCard'
 import GameList from '../components/GameList'
+import ProfileCard from '../components/ProfileCard'
 
 export default {
   name: 'MainPage',
   components: {
+    ProfileCard,
     AgentList,
     RankCard,
     GameList

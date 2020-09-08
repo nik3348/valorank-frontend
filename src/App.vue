@@ -2,13 +2,13 @@
   <b-col class="p-0">
     <TheNavBar/>
     <b-row id="app">
-      <b-col cols="2"/>
-      <b-col cols="8" class="p-0">
+      <b-col/>
+      <b-col md="auto" class="p-0">
         <div class="cover">
           <router-view/>
         </div>
       </b-col>
-      <b-col cols="2"/>
+      <b-col/>
     </b-row>
   </b-col>
 </template>
@@ -35,6 +35,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
 body {
   background-image: url('./assets/background.jpg');
   background-repeat: no-repeat;
@@ -43,9 +44,10 @@ body {
   overflow-x: hidden;
   width: 100%
 }
+
 .cover {
   padding-top: 60px;
-  background-color: rgba(33,46,62, 0.85);
+  background-color: rgba(33, 46, 62, 0.85);
   height: 100vh;
 }
 </style>

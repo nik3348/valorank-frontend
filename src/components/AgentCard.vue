@@ -4,7 +4,7 @@
     <b-col class="name p-0">
       {{ capitalizeFirstLetter(agent.name) }}
       <br>
-      <span v-bind:title="'Avg Combat Score'">
+      <span id="acs" v-b-tooltip.hover title="Avg Combat Score">
           {{ agent.combatScore }}
       </span>
     </b-col>
@@ -44,6 +44,7 @@ export default {
   width: 55px;
   margin: 5px;
 }
+
 .stats-card {
   background-color: lightgray;
   text-align: center;
@@ -53,6 +54,7 @@ export default {
   margin: 1px 0;
   border-radius: 4px;
 }
+
 .name {
   text-align: start;
 }
