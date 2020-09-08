@@ -3,7 +3,7 @@
     <TheNavBar/>
     <b-row id="app">
       <b-col/>
-      <b-col md="auto" class="p-0">
+      <b-col class="p-0" md="auto">
         <div class="cover">
           <router-view/>
         </div>

@@ -2,7 +2,7 @@
   <div>
     <b-navbar class="nav-bar" toggleable="lg" type="dark">
       <b-navbar-brand href="#">
-        <img :src="require('../assets/logo.png')" class="logo d-inline-block align-top" alt="logo">
+        <img :src="require('../assets/logo.png')" alt="logo" class="logo d-inline-block align-top">
         VALORANK
       </b-navbar-brand>
 
@@ -13,13 +13,13 @@
 
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
-          <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-          <b-button size="sm" class="my-2 my-sm-0" type="submit">
+          <b-form-input class="mr-sm-2" placeholder="Search" size="sm"></b-form-input>
+          <b-button class="my-2 my-sm-0" size="sm" type="submit">
             <b-icon-search/>
           </b-button>
         </b-nav-form>
 
-        <b-nav-item-dropdown text="LANG" right>
+        <b-nav-item-dropdown right text="LANG">
           <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>

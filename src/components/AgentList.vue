@@ -1,6 +1,6 @@
 <template>
   <b-col class="p-0">
-    <AgentCard v-bind:agent="agent" v-for="agent in agentList" v-bind:key="agent.name"/>
+    <AgentCard v-for="agent in agentList" v-bind:key="agent.name" v-bind:agent="agent"/>
   </b-col>
 </template>
 
@@ -75,7 +75,9 @@ export default {
   computed: {
     agentList () {
       let response = this.agents
-      return response.sort(function (a, b) { return (b.wins + b.loses) - (a.wins + a.loses) })
+      return response.sort(function (a, b) {
+        return (b.wins + b.loses) - (a.wins + a.loses)
+      })
     }
   }
 }

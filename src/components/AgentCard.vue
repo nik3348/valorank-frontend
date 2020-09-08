@@ -1,6 +1,6 @@
 <template>
-  <b-row class="stats-card" align-v="center">
-    <img class="agentIcon" :src="require('../assets/agents/' + agent.name + '.png')" alt="agent">
+  <b-row align-v="center" class="stats-card">
+    <img :src="require('../assets/agents/' + agent.name + '.png')" alt="agent" class="agentIcon">
     <b-col class="name p-0">
       {{ capitalizeFirstLetter(agent.name) }}
       <br>

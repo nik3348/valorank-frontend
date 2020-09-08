@@ -1,6 +1,6 @@
 <template>
   <b-col class="p-0">
-    <GameCard v-bind:game="game" v-for="game in games" v-bind:key="game.name"/>
+    <GameCard v-for="game in games" v-bind:key="game.name" v-bind:game="game"/>
   </b-col>
 </template>
 

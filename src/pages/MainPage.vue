@@ -6,7 +6,7 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col cols="2" md="auto" class="pr-1 pl-4">
+      <b-col class="pr-1 pl-4" cols="2" md="auto">
         <RankCard/>
         <AgentList/>
       </b-col>

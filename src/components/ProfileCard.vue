@@ -1,5 +1,5 @@
 <template>
-  <b-row class="profile-card" align-v="center" align-h="center">
+  <b-row align-h="center" align-v="center" class="profile-card">
     <div class="banner"/>
     <div class="profile-name">
       <h1>{{ name }}</h1>
