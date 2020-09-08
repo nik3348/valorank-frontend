@@ -48,12 +48,27 @@ export default {
 
 <style scoped>
 .game-card {
-  background-color: lightgray;
+  color: white;
+  background-color: #2b3e54;
+  border-color: #2b3e54;
   text-align: center;
   font-size: 15px;
   border-style: groove;
+  border-top-width: 0;
+  border-left-width: 0;
   margin: 0;
   border-radius: 4px;
+  transition: all .2s ease
+}
+
+.game-card:hover {
+  background-color: #324861;
+  border-color: #324861;
+  transform: translateX(-5px);
+}
+
+.game-card:active {
+  transform: scale(.99);
 }
 
 .name {
@@ -66,11 +81,11 @@ export default {
 }
 
 .victory {
-  color: blue;
+  color: #2fba12;
 }
 
 .defeat {
-  color: red;
+  color: #ff4655;
 }
 
 .icon {

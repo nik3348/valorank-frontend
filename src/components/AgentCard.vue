@@ -46,7 +46,11 @@ export default {
 }
 
 .stats-card {
-  background-color: lightgray;
+  background-color: #2b3e54;
+  border-color: #2b3e54;
+  border-top-width: 0;
+  border-left-width: 0;
+  color: white;
   text-align: center;
   font-size: 15px;
   width: 340px;

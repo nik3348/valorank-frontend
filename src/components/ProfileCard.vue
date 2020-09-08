@@ -4,6 +4,7 @@
     <div class="profile-name">
       <h1>{{ name }}</h1>
     </div>
+    <div class="edit-icon"/>
   </b-row>
 </template>
 
@@ -31,9 +32,13 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
   padding: 20px;
   text-align: center;
+  transition: all .1s ease
+}
+
+.banner:hover + .profile-name {
+  opacity: 0;
 }
 
 .profile-card {
@@ -55,5 +60,30 @@ export default {
   height: 100%;
   filter: blur(3px);
   -webkit-filter: blur(3px);
+  transition: all .1s ease
+}
+
+.banner:hover {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.edit-icon {
+  background-image: url('../assets/edit-icon-white.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: #000000;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+.edit-icon:hover {
+  background-image: url('../assets/edit-icon-black.png');
+  background-color: #8c8c8c;
 }
 </style>

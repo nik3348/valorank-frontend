@@ -46,7 +46,7 @@ body {
 }
 
 .cover {
-  padding-top: 60px;
+  padding-top: 15px;
   background-color: rgba(33, 46, 62, 0.85);
   height: 100vh;
 }

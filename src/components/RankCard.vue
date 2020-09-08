@@ -17,7 +17,7 @@ export default {
   name: 'RankCard',
   data () {
     return {
-      rankMsg: 'RADIANT',
+      rankMsg: 'Radiant',
       rank: 'radiant',
       wins: 974,
       loses: 952
@@ -32,10 +32,12 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 .rankCard {
-  background-color: lightgray;
+  color: white;
+  border-color: #2b3e54;
+  background-color: #2b3e54;
+  border-top-width: 0;
+  border-left-width: 0;
   text-align: start;
   width: 340px;
   border-style: groove;
@@ -54,10 +56,8 @@ export default {
 }
 
 .rank {
-  color: blue;
+  color: #ffc925;
   font-size: 20px;
-  font-family: 'Anton', sans-serif;
-  font-weight: lighter;
 }
 
 .msg {
