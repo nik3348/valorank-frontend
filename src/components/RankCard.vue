@@ -39,6 +39,7 @@ export default {
   text-align: start;
   width: 340px;
   border-style: groove;
+  border-radius: 4px;
 }
 .rankImage {
   margin-left: 26px;
