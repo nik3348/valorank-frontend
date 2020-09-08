@@ -52,7 +52,8 @@ export default {
   text-align: center;
   font-size: 15px;
   border-style: groove;
-  margin: 0 15px;
+  margin: 0;
+  border-radius: 4px;
 }
 .name {
   text-align: start;

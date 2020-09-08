@@ -1,18 +1,26 @@
 <template>
-  <b-row id="app">
-    <b-col cols="2"/>
-    <b-col>
-      <div class="cover">
-        <router-view/>
-      </div>
-    </b-col>
-    <b-col cols="2"/>
-  </b-row>
+  <b-col class="p-0">
+    <TheNavBar/>
+    <b-row id="app">
+      <b-col cols="2"/>
+      <b-col cols="8" class="p-0">
+        <div class="cover">
+          <router-view/>
+        </div>
+      </b-col>
+      <b-col cols="2"/>
+    </b-row>
+  </b-col>
 </template>
 
 <script>
+import TheNavBar from './components/TheNavBar'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    TheNavBar
+  }
 }
 </script>
 

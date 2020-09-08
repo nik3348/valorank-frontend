@@ -51,6 +51,7 @@ export default {
   width: 340px;
   border-style: groove;
   margin: 1px 0;
+  border-radius: 4px;
 }
 .name {
   text-align: start;

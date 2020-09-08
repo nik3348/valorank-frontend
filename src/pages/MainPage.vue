@@ -1,10 +1,10 @@
 <template>
   <b-row>
-    <b-col md="auto" class="pr-0">
+    <b-col cols="2" md="auto" class="pr-1 pl-5">
       <RankCard/>
       <AgentList/>
     </b-col>
-    <b-col class="pl-0">
+    <b-col class="pl-1 pr-5">
       <GameList/>
     </b-col>
   </b-row>

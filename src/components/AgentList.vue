@@ -1,5 +1,5 @@
 <template>
-  <b-col>
+  <b-col class="p-0">
     <AgentCard v-bind:agent="agent" v-for="agent in agentList" v-bind:key="agent.name"/>
   </b-col>
 </template>
