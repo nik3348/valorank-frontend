@@ -68,6 +68,42 @@ export default {
           wins: 1,
           loses: 0,
           combatScore: 3305
+        },
+        {
+          name: 'cypher',
+          kills: 13,
+          deaths: 8,
+          assists: 11,
+          wins: 1,
+          loses: 0,
+          combatScore: 1414
+        },
+        {
+          name: 'breach',
+          kills: 2,
+          deaths: 2,
+          assists: 2,
+          wins: 0,
+          loses: 1,
+          combatScore: 2222
+        },
+        {
+          name: 'reyna',
+          kills: 10,
+          deaths: 9,
+          assists: 2,
+          wins: 0,
+          loses: 2,
+          combatScore: 1333
+        },
+        {
+          name: 'sage',
+          kills: 7,
+          deaths: 2,
+          assists: 11,
+          wins: 1,
+          loses: 0,
+          combatScore: 2142
         }
       ]
     }

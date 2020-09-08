@@ -1,16 +1,16 @@
 <template>
   <b-col>
     <b-row>
-      <b-col class="px-4">
+      <b-col class="banner">
         <ProfileCard/>
       </b-col>
     </b-row>
     <b-row>
-      <b-col class="pr-1 pl-4" cols="2" md="auto">
+      <b-col class="pr-1 pl-3" cols="2" md="auto">
         <RankCard/>
         <AgentList/>
       </b-col>
-      <b-col class="pl-1 pr-4">
+      <b-col class="pl-1 pr-3">
         <GameList/>
       </b-col>
     </b-row>
@@ -36,5 +36,7 @@ export default {
 </script>
 
 <style scoped>
-
+.banner {
+  padding: 0 19px;
+}
 </style>

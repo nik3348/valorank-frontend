@@ -46,9 +46,9 @@ export default {
 
 .rankImage {
   margin-left: 26px;
-  margin-right: 10px;
+  margin-right: 5px;
   padding: 19px 5px 19px 15px;
-  height: 130px;
+  height: 135px;
 }
 
 .gamemode {
