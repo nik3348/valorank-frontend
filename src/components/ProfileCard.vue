@@ -13,7 +13,7 @@ export default {
   name: 'ProfileCard',
   data () {
     return {
-      name: 'P a c e r'
+      name: 'P H A N T O M'
     }
   }
 }
@@ -44,10 +44,9 @@ export default {
 .profile-card {
   background-color: lightgray;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   width: 100%;
   height: 300px;
-  border-style: groove;
   margin: 5px 0;
 }
 

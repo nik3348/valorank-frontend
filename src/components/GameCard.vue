@@ -12,10 +12,10 @@
       <img :src="require('../assets/agents/' + game.agent + '.png')" alt="agent" class="agentIcon">
     </b-col>
     <b-col class="kda">
-      <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
-      <br/>
+      <b-row class="px-2">
+        <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
+      </b-row>
       <b-row class="px-2" align-h="between">
-        <span class="secondaryColor" v-b-tooltip.hover title="Avg Combat Score">{{ game.score }}</span>
         <span v-if="game.mmvp" class="mvp">M-MVP</span>
         <span v-else-if="game.tmvp" class="mvp">T-MVP</span>
       </b-row>
@@ -60,10 +60,7 @@ export default {
   background-color: #2b3e54;
   border-color: #2b3e54;
   text-align: center;
-  font-size: 15px;
-  border-style: groove;
-  border-top-width: 0;
-  border-left-width: 0;
+  font-size: 13px;
   margin: 0 0 7px;
   border-radius: 4px;
   height: 80px;
@@ -83,7 +80,7 @@ export default {
 .tinge {
   display: inline-block;
   width: 20px;
-  height: 76px;
+  height: 80px;
   border-radius: 4px 0 0 4px;
   writing-mode: vertical-rl;
   text-orientation: mixed;

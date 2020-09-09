@@ -79,15 +79,11 @@ export default {
 .stats-card {
   background-color: #2b3e54;
   border-color: #2b3e54;
-  border-top-width: 0;
-  border-left-width: 0;
-  /*color: #fcd077;*/
   color: rgba(252, 208, 119, 0.6);
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   width: 340px;
-  border-style: groove;
-  margin: 1px 0;
+  margin: 3px 0;
   border-radius: 4px;
 }
 

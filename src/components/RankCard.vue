@@ -36,11 +36,8 @@ export default {
   color: white;
   border-color: #2b3e54;
   background-color: #2b3e54;
-  border-top-width: 0;
-  border-left-width: 0;
   text-align: start;
   width: 340px;
-  border-style: groove;
   border-radius: 4px;
 }
 
@@ -52,15 +49,15 @@ export default {
 }
 
 .gamemode {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .rank {
   color: #ffc925;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .msg {
-  font-size: 15px;
+  font-size: 13px;
 }
 </style>
