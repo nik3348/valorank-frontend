@@ -12,21 +12,23 @@
       </span>
     </b-col>
     <b-col class="p-0">
-      {{ getKDAR(agent) }} : 1 KDA
+      {{ getKDAR(agent) }} : 1 <span class="secondaryColor">KDA</span>
       <br>
       {{ agent.kills }} / {{ agent.deaths }} / {{ agent.assists }}
     </b-col>
     <b-col>
       <span v-b-tooltip.hover :title="'W ' + agent.wins + '-' + agent.loses + ' L'">
-        WR {{ getWinRatio(agent) }}%
+        <span class="secondaryColor">WR</span> {{ getWinRatio(agent) }}%
       </span>
       <br>
-      {{ agent.wins + agent.loses }} Played
+      {{ agent.wins + agent.loses }} <span class="secondaryColor">Played</span>
     </b-col>
   </b-row>
 </template>
 
 <script>
+// TODO: Style font colors
+
 export default {
   name: 'AgentCard',
   props: ['agent'],
@@ -79,7 +81,8 @@ export default {
   border-color: #2b3e54;
   border-top-width: 0;
   border-left-width: 0;
-  color: white;
+  /*color: #fcd077;*/
+  color: rgba(252, 208, 119, 0.6);
   text-align: center;
   font-size: 15px;
   width: 340px;
@@ -87,6 +90,11 @@ export default {
   margin: 1px 0;
   border-radius: 4px;
 }
+
+/*.secondaryColor {*/
+/*  color: #f8a70b;*/
+/*  opacity: 50%;*/
+/*}*/
 
 .tinge {
   margin-left: 1px;

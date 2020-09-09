@@ -1,5 +1,6 @@
 <template>
   <b-row align-v="center" class="game-card">
+    <div class="tinge secondaryColor">{{ capitalizeFirstLetter(game.map) }}</div>
     <b-col class="results p-0">
       <span v-bind:class="[isWin() ? 'victory' : 'defeat']">{{ game.gamemode }}</span>
       <br/>
@@ -11,9 +12,13 @@
       <img :src="require('../assets/agents/' + game.agent + '.png')" alt="agent" class="agentIcon">
     </b-col>
     <b-col class="kda">
-      <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{game.assists}}</span>
+      <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
       <br/>
-      <span v-b-tooltip.hover title="Avg Combat Score">{{ game.score }}</span>
+      <b-row class="px-2" align-h="between">
+        <span class="secondaryColor" v-b-tooltip.hover title="Avg Combat Score">{{ game.score }}</span>
+        <span v-if="game.mmvp" class="mvp">M-MVP</span>
+        <span v-else-if="game.tmvp" class="mvp">T-MVP</span>
+      </b-row>
     </b-col>
     <img
       v-for="player in game.friend"
@@ -59,7 +64,7 @@ export default {
   border-style: groove;
   border-top-width: 0;
   border-left-width: 0;
-  margin: 0 0 5px;
+  margin: 0 0 7px;
   border-radius: 4px;
   height: 80px;
   transition: all .2s ease
@@ -75,17 +80,32 @@ export default {
   transform: scale(.99);
 }
 
+.tinge {
+  display: inline-block;
+  width: 20px;
+  height: 76px;
+  border-radius: 4px 0 0 4px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .kda {
   text-align: start;
   width: 110px;
 }
 
-.results {
-  width: 100px;
+.secondaryColor {
+  color: rgba(252, 208, 119, 0.6);
 }
 
-.score {
-  color: #fcd077;
+.mvp {
+  color: white;
+}
+
+.results {
+  width: 55px;
 }
 
 .agentIcon {

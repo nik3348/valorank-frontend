@@ -34,7 +34,7 @@ export default {
   z-index: 2;
   padding: 20px;
   text-align: center;
-  transition: all .1s ease
+  transition: all .2s ease
 }
 
 .banner:hover + .profile-name {
@@ -60,7 +60,7 @@ export default {
   height: 100%;
   filter: blur(3px);
   -webkit-filter: blur(3px);
-  transition: all .1s ease
+  transition: all .2s ease
 }
 
 .banner:hover {
