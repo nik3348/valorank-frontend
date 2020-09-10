@@ -16,8 +16,8 @@
         <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
       </b-row>
       <b-row class="px-2" align-h="between">
-        <span v-if="game.mmvp" class="mvp">M-MVP</span>
-        <span v-else-if="game.tmvp" class="mvp">T-MVP</span>
+        <b-badge v-if="game.mmvp" variant="danger">M-MVP</b-badge>
+        <b-badge v-else-if="game.tmvp" variant="warning">T-MVP</b-badge>
       </b-row>
     </b-col>
     <img
@@ -95,10 +95,6 @@ export default {
 
 .secondaryColor {
   color: rgba(252, 208, 119, 0.6);
-}
-
-.mvp {
-  color: white;
 }
 
 .results {
