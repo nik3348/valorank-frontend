@@ -13,7 +13,7 @@ export default {
   name: 'ProfileCard',
   data () {
     return {
-      name: 'P H A N T O M'
+      name: 'F U R Y'
     }
   }
 }
@@ -51,7 +51,7 @@ export default {
 }
 
 .banner {
-  background-image: url('../assets/profile-banner.png');
+  background-image: url('../assets/reyna-banner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;

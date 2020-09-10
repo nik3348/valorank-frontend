@@ -5,7 +5,7 @@
         <ProfileCard/>
       </b-col>
     </b-row>
-    <b-row>
+    <b-row style="padding: 0 1px">
       <b-col class="pr-1 pl-3" cols="2" md="auto">
         <RankCard/>
         <AgentList/>

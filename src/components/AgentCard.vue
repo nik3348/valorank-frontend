@@ -27,8 +27,6 @@
 </template>
 
 <script>
-// TODO: Style font colors
-
 export default {
   name: 'AgentCard',
   props: ['agent'],

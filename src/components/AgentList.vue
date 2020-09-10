@@ -25,7 +25,7 @@ export default {
           combatScore: 3256
         },
         {
-          name: 'jett',
+          name: 'reyna',
           kills: 25,
           deaths: 22,
           assists: 13,
@@ -88,7 +88,7 @@ export default {
           combatScore: 2222
         },
         {
-          name: 'reyna',
+          name: 'jett',
           kills: 10,
           deaths: 9,
           assists: 2,
