@@ -9,6 +9,7 @@
 import GameCard from './GameCard'
 
 // TODO: Add button to fetch more results
+// TODO: Add surrender results
 export default {
   name: 'GameList',
   components: {

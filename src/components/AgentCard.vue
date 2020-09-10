@@ -83,6 +83,7 @@ export default {
   width: 340px;
   margin: 3px 0;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 /*.secondaryColor {*/
@@ -94,8 +95,7 @@ export default {
   margin-left: 1px;
   display:inline-block;
   width: 3px;
-  height: 50px;
-  border-radius: 100px;
+  height: 60px;
 }
 
 .acs {

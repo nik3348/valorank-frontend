@@ -4,9 +4,7 @@
     <b-row id="app">
       <b-col/>
       <b-col class="p-0" md="auto">
-        <div class="cover">
           <router-view/>
-        </div>
       </b-col>
       <b-col/>
     </b-row>
@@ -42,11 +40,5 @@ body {
   background-size: cover;
   overflow-x: hidden;
   width: 100%
-}
-
-.cover {
-  padding-top: 15px;
-  background-color: rgba(33, 46, 62, 0.85);
-  height: 100%;
 }
 </style>

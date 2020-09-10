@@ -7,8 +7,8 @@
       </b-navbar-brand>
 
       <b-navbar-nav>
-        <b-nav-item href="#">HOME</b-nav-item>
-        <!--          <b-nav-item href="#" disabled>DISABLED</b-nav-item>-->
+        <b-nav-item href="#/">HOME</b-nav-item>
+        <b-nav-item href="#/login">LOGIN</b-nav-item>
       </b-navbar-nav>
 
       <b-navbar-nav class="ml-auto">

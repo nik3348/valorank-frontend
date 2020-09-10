@@ -16,8 +16,8 @@
         <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
       </b-row>
       <b-row class="px-2" align-h="between">
-        <b-badge v-if="game.mmvp" variant="danger">M-MVP</b-badge>
-        <b-badge v-else-if="game.tmvp" variant="warning">T-MVP</b-badge>
+        <b-badge v-b-tooltip.hover title="Match MVP" v-if="game.mmvp" variant="danger">M-MVP</b-badge>
+        <b-badge v-b-tooltip.hover title="Team MVP" v-else-if="game.tmvp" variant="warning">T-MVP</b-badge>
       </b-row>
     </b-col>
     <img
@@ -64,7 +64,8 @@ export default {
   margin: 0 0 7px;
   border-radius: 4px;
   height: 80px;
-  transition: all .2s ease
+  transition: all .2s ease;
+  overflow: hidden;
 }
 
 .game-card:hover {
@@ -81,7 +82,6 @@ export default {
   display: inline-block;
   width: 20px;
   height: 80px;
-  border-radius: 4px 0 0 4px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   background-repeat: no-repeat;

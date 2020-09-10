@@ -1,5 +1,5 @@
 <template>
-  <b-col>
+  <b-col class="cover">
     <b-row>
       <b-col class="banner">
         <ProfileCard/>
@@ -39,5 +39,11 @@ export default {
 <style scoped>
 .banner {
   padding: 0 19px;
+}
+
+.cover {
+  padding-top: 15px;
+  background-color: rgba(33, 46, 62, 0.85);
+  height: 100%;
 }
 </style>
