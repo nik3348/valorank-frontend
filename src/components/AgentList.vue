@@ -1,6 +1,6 @@
 <template>
   <b-col class="p-0">
-    <AgentCard v-bind:agent="agent" v-for="agent in agentList" v-bind:key="agent.name"/>
+    <AgentCard v-for="agent in agentList" v-bind:key="agent.name" v-bind:agent="agent"/>
   </b-col>
 </template>
 
@@ -25,7 +25,7 @@ export default {
           combatScore: 3256
         },
         {
-          name: 'jett',
+          name: 'reyna',
           kills: 25,
           deaths: 22,
           assists: 13,
@@ -68,6 +68,42 @@ export default {
           wins: 1,
           loses: 0,
           combatScore: 3305
+        },
+        {
+          name: 'cypher',
+          kills: 13,
+          deaths: 8,
+          assists: 11,
+          wins: 1,
+          loses: 0,
+          combatScore: 1414
+        },
+        {
+          name: 'breach',
+          kills: 2,
+          deaths: 2,
+          assists: 2,
+          wins: 0,
+          loses: 1,
+          combatScore: 2222
+        },
+        {
+          name: 'jett',
+          kills: 10,
+          deaths: 9,
+          assists: 2,
+          wins: 0,
+          loses: 2,
+          combatScore: 1333
+        },
+        {
+          name: 'sage',
+          kills: 7,
+          deaths: 2,
+          assists: 11,
+          wins: 1,
+          loses: 0,
+          combatScore: 2142
         }
       ]
     }
@@ -75,7 +111,9 @@ export default {
   computed: {
     agentList () {
       let response = this.agents
-      return response.sort(function (a, b) { return (b.wins + b.loses) - (a.wins + a.loses) })
+      return response.sort(function (a, b) {
+        return (b.wins + b.loses) - (a.wins + a.loses)
+      })
     }
   }
 }

@@ -1,16 +1,16 @@
 <template>
   <b-col>
     <b-row>
-      <b-col class="px-4">
+      <b-col class="banner">
         <ProfileCard/>
       </b-col>
     </b-row>
-    <b-row>
-      <b-col cols="2" md="auto" class="pr-1 pl-4">
+    <b-row style="padding: 0 1px">
+      <b-col class="pr-1 pl-3" cols="2" md="auto">
         <RankCard/>
         <AgentList/>
       </b-col>
-      <b-col class="pl-1 pr-4">
+      <b-col class="pl-1 pr-3">
         <GameList/>
       </b-col>
     </b-row>
@@ -23,6 +23,8 @@ import RankCard from '../components/RankCard'
 import GameList from '../components/GameList'
 import ProfileCard from '../components/ProfileCard'
 
+// TODO: Need to add mobile support
+// TODO: Add footer with copyright and riot boilerplate
 export default {
   name: 'MainPage',
   components: {
@@ -35,5 +37,7 @@ export default {
 </script>
 
 <style scoped>
-
+.banner {
+  padding: 0 19px;
+}
 </style>

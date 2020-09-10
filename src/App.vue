@@ -3,7 +3,7 @@
     <TheNavBar/>
     <b-row id="app">
       <b-col/>
-      <b-col md="auto" class="p-0">
+      <b-col class="p-0" md="auto">
         <div class="cover">
           <router-view/>
         </div>
@@ -33,7 +33,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 body {
@@ -46,8 +45,8 @@ body {
 }
 
 .cover {
-  padding-top: 60px;
+  padding-top: 15px;
   background-color: rgba(33, 46, 62, 0.85);
-  height: 100vh;
+  height: 100%;
 }
 </style>

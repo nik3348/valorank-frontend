@@ -1,11 +1,11 @@
 <template>
   <div class='rankCard'>
     <b-row align-v="center">
-      <img class="rankImage" :src="require('../assets/ranks/' + rank + '.png')" alt="rank">
+      <img :src="require('../assets/ranks/' + rank + '.png')" alt="rank" class="rankImage">
       <b-col>
         <div class="gamemode">Rated</div>
         <div class="rank">{{ rankMsg }}</div>
-        <div class="msg">{{ wins + "W " + loses + "L" }}</div>
+        <div class="msg">{{ wins + 'W ' + loses + 'L' }}</div>
         <div class="msg">Win Ratio {{ getWinRatio() }}%</div>
       </b-col>
     </b-row>
@@ -17,7 +17,7 @@ export default {
   name: 'RankCard',
   data () {
     return {
-      rankMsg: 'RADIANT',
+      rankMsg: 'Radiant',
       rank: 'radiant',
       wins: 974,
       loses: 952
@@ -32,30 +32,32 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 .rankCard {
-  background-color: lightgray;
+  color: white;
+  border-color: #2b3e54;
+  background-color: #2b3e54;
   text-align: start;
   width: 340px;
-  border-style: groove;
+  border-radius: 4px;
 }
+
 .rankImage {
   margin-left: 26px;
-  margin-right: 10px;
+  margin-right: 5px;
   padding: 19px 5px 19px 15px;
-  height: 130px;
+  height: 135px;
 }
+
 .gamemode {
-  font-size: 15px;
+  font-size: 13px;
 }
+
 .rank {
-  color: blue;
-  font-size: 20px;
-  font-family: 'Anton', sans-serif;
-  font-weight: lighter;
+  color: #ffc925;
+  font-size: 25px;
 }
+
 .msg {
-  font-size: 15px;
+  font-size: 13px;
 }
 </style>
