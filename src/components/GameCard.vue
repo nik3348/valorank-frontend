@@ -2,11 +2,13 @@
   <b-row align-v="center" class="game-card">
     <div class="tinge secondaryColor">{{ capitalizeFirstLetter(game.map) }}</div>
     <b-col class="results p-0">
-      <span v-bind:class="[isWin() ? 'victory' : 'defeat']">{{ game.gamemode }}</span>
+      <span :class="[isWin() ? 'victory' : 'defeat']">{{ game.gamemode }}</span>
       <br/>
-      <span class="score">{{ game.wins }} - {{ game.loses }}</span>
+      <span :style="{opacity: isWin() ? 1 : 0.5}">{{ game.wins }}</span>
+      <span style="opacity: 0.5">-</span>
+      <span :style="{opacity: isWin() ? 0.5 : 1}">{{ game.loses }}</span>
       <br/>
-      <span v-bind:class="[isWin() ? 'victory' : 'defeat']">{{ isWin() ? 'Victory' : 'Defeat' }}</span>
+      <span :class="[isWin() ? 'victory' : 'defeat']">{{ isWin() ? 'Victory' : 'Defeat' }}</span>
     </b-col>
     <b-col class="p-0" md="auto">
       <img :src="require('../assets/agents/' + game.agent + '.png')" alt="agent" class="agentIcon">
@@ -22,7 +24,7 @@
     </b-col>
     <img
       v-for="player in game.friend"
-      v-bind:key="player"
+      :key="player"
       :src="require('../assets/agents/' + player + '.png')"
       alt="agent"
       class="agentIcon"
@@ -30,12 +32,11 @@
     <span>vs</span>
     <img
       v-for="player in game.enemy"
-      v-bind:key="player"
+      :key="player"
       :src="require('../assets/agents/' + player + '.png')"
       alt="agent"
       class="agentIcon"
     >
-    <img :src="require('../assets/pop-up-icon.png')" alt="pop-up" class="icon">
   </b-row>
 </template>
 
@@ -66,6 +67,7 @@ export default {
   height: 80px;
   transition: all .2s ease;
   overflow: hidden;
+  padding-right: 5px;
 }
 
 .game-card:hover {
@@ -114,8 +116,7 @@ export default {
   color: #ff4655;
 }
 
-.icon {
-  margin: 0 5px;
-  width: 20px;
+.score {
+  opacity: 0.5;
 }
 </style>

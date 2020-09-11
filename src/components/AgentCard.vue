@@ -3,7 +3,7 @@
     <div class="tinge" :style="{backgroundColor: getAgentColor(agent.name)}"/>
     <img :src="require('../assets/agents/' + agent.name + '.png')" alt="agent" class="agentIcon">
     <b-col class="name p-0">
-      <span :style="{color: getAgentColor(agent.name)}">
+      <span :style="{color: getAgentColor(agent.name)}" class="primary-color">
         {{ capitalizeFirstLetter(agent.name) }}
       </span>
       <br>
@@ -12,13 +12,13 @@
       </span>
     </b-col>
     <b-col class="p-0">
-      {{ getKDAR(agent) }} : 1 <span class="secondaryColor">KDA</span>
+      <span class="primary-color">{{ agent.kills }} / {{ agent.deaths }} / {{ agent.assists }}</span>
       <br>
-      {{ agent.kills }} / {{ agent.deaths }} / {{ agent.assists }}
+      {{ getKDAR(agent) }} : 1 <span class="secondaryColor">KDA</span>
     </b-col>
     <b-col>
-      <span v-b-tooltip.hover :title="'W ' + agent.wins + '-' + agent.loses + ' L'">
-        <span class="secondaryColor">WR</span> {{ getWinRatio(agent) }}%
+      <span v-b-tooltip.hover :title="'W ' + agent.wins + '-' + agent.loses + ' L'" class="primary-color">
+        {{ getWinRatio(agent) }}%
       </span>
       <br>
       {{ agent.wins + agent.loses }} <span class="secondaryColor">Played</span>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+// TODO: Change KDA font color
+
 export default {
   name: 'AgentCard',
   props: ['agent'],
@@ -86,10 +88,15 @@ export default {
   overflow: hidden;
 }
 
-/*.secondaryColor {*/
-/*  color: #f8a70b;*/
-/*  opacity: 50%;*/
-/*}*/
+.primary-color {
+  font-size: 16px;
+  color: rgb(252, 208, 119);;
+}
+
+.secondaryColor {
+  color: #f8a70b;
+  opacity: 50%;
+}
 
 .tinge {
   margin-left: 1px;
