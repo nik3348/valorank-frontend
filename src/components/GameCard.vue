@@ -4,9 +4,9 @@
     <b-col class="results p-0">
       <span :class="[isWin() ? 'victory' : 'defeat']">{{ game.gamemode }}</span>
       <br/>
-      <span :style="{opacity: isWin() ? 1 : 0.5}">{{ game.wins }}</span>
-      <span style="opacity: 0.5">-</span>
-      <span :style="{opacity: isWin() ? 0.5 : 1}">{{ game.loses }}</span>
+      <span :style="{opacity: isWin() ? 1 : 0.6}">{{ game.wins }}</span>
+      <span style="opacity: 0.6">-</span>
+      <span :style="{opacity: isWin() ? 0.6 : 1}">{{ game.loses }}</span>
       <br/>
       <span :class="[isWin() ? 'victory' : 'defeat']">{{ isWin() ? 'Victory' : 'Defeat' }}</span>
     </b-col>

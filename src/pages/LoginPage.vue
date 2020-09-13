@@ -2,30 +2,39 @@
   <b-col>
     <b-container class="login-card">
       <b-row>
-        <div class="label-box">
-          <b-col class="px-5">
-            <!--            <b-row class="title">&nbsp;</b-row>-->
-            <!--            <b-row class="labels" align-v="center">USERNAME</b-row>-->
-            <!--            <b-row class="labels" align-v="center">PASSWORD</b-row>-->
-          </b-col>
-        </div>
+        <div class="label-box"/>
         <div class="login">
           <b-row>
-            <b-col>
-              <div class="title">LOGIN</div>
-              <div class="line">&nbsp;</div>
-              <b-form-input id="input-small" class="labels input" size="sm" placeholder="USERNAME" trim required/>
-              <b-form-input id="input-small" class="labels input" size="sm" placeholder="PASSWORD" trim required/>
-              <div class="link">
-                <b-link href="https://google.com" class="link">Forgot password?</b-link>
-              </div>
-              <b-row class="m-0" align-h="center">
-                <b-button class="button" variant="danger">LOGIN</b-button>
-              </b-row>
-            </b-col>
+            <b-form @submit="onSubmit">
+              <b-col>
+                <div class="title">LOGIN</div>
+                <div class="line">&nbsp;</div>
+                <b-form-input
+                  type="text"
+                  id="input-small"
+                  class="labels input"
+                  size="sm"
+                  v-model="form.username"
+                  placeholder="USERNAME"
+                  trim required/>
+                <b-form-input
+                  type="password"
+                  class="labels input"
+                  size="sm"
+                  v-model="form.password"
+                  placeholder="PASSWORD"
+                  trim required/>
+                <div class="link">
+                  <b-link href="forgot-password" class="link">Forgot password?</b-link>
+                </div>
+                <b-row class="m-0" align-h="center">
+                  <b-button type="submit" class="button" variant="danger">LOGIN</b-button>
+                </b-row>
+              </b-col>
+            </b-form>
           </b-row>
           <div class="register">Don't have an account?
-            <b-link href="https://google.com" class="register-link">Register here</b-link>
+            <b-link href="register" class="register-link">Register here</b-link>
           </div>
         </div>
       </b-row>
@@ -35,7 +44,21 @@
 
 <script>
 export default {
-  name: 'LoginPage'
+  name: 'LoginPage',
+  data () {
+    return {
+      form: {
+        username: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault()
+      alert(JSON.stringify(this.form))
+    }
+  }
 }
 </script>
 

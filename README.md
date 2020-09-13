@@ -9,6 +9,12 @@ Our goals are:
 - To bring statistics to the player for them to reflect on their performance
 - To give the players a way to showcase their achievements
 
+## Screenshots
+### Login
+![Login](./screenshots/login-page.png)
+### Profile page
+![Profile](./screenshots/profile-page.png)
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install dependencies.
