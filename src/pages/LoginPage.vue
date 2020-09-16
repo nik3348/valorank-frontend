@@ -43,6 +43,8 @@
 </template>
 
 <script>
+const apis = require('../apis')
+
 export default {
   name: 'LoginPage',
   data () {
@@ -56,7 +58,33 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.form)
+      }
+      fetch(apis.login, requestOptions)
+        .then(response => response.json())
+        .then(data => {
+          let isAdmin = data.user.isAdmin
+          this.$emit('authenticated', true)
+          localStorage.setItem('user', JSON.stringify(data.user))
+          localStorage.setItem('jwt', data.token)
+
+          if (localStorage.getItem('jwt') != null) {
+            if (this.$route.params.nextUrl != null) {
+              this.$router.push(this.$route.params.nextUrl)
+            } else {
+              if (isAdmin) {
+                this.$router.push('admin')
+              } else {
+                this.$router.push('/')
+              }
+            }
+          } else {
+            alert('error missing jwt')
+          }
+        })
     }
   }
 }
@@ -72,7 +100,7 @@ export default {
   border-radius: 4px;
   width: 800px;
   height: 550px;
-  margin-top: 200px;
+  transform: translate(0%, 45%);
   overflow: hidden;
 }
 

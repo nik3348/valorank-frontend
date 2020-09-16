@@ -1,10 +1,10 @@
 <template>
   <b-col class="p-0">
-    <TheNavBar/>
+    <TheNavBar v-if="authenticated" @authenticated="setAuthenticated"/>
     <b-row id="app">
       <b-col/>
       <b-col class="p-0" md="auto">
-          <router-view/>
+          <router-view @authenticated="setAuthenticated"/>
       </b-col>
       <b-col/>
     </b-row>
@@ -16,8 +16,18 @@ import TheNavBar from './components/TheNavBar'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      authenticated: false
+    }
+  },
   components: {
     TheNavBar
+  },
+  methods: {
+    setAuthenticated (status) {
+      this.authenticated = status
+    }
   }
 }
 </script>
