@@ -1,14 +1,10 @@
-FROM node:12
-
+FROM node:12 as build-stage
 WORKDIR /usr/src/app
-
 COPY package*.json ./
-RUN npm install --production
-
+RUN npm install
 COPY . .
-
-EXPOSE 8080
-
-CMD [ "npm", "run", "build" ]
+RUN npm run build
 
 
+FROM httpd:2.4 as production-stage
+COPY --from=build-stage /usr/src/app/dist /usr/local/apache2/htdocs/
