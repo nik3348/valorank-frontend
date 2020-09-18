@@ -1,6 +1,6 @@
 <template>
   <b-col class="p-0">
-    <TheNavBar v-if="authenticated" @authenticated="setAuthenticated"/>
+    <TheNavBar v-if="isAuthenticated()" @authenticated="setAuthenticated"/>
     <b-row id="app">
       <b-col/>
       <b-col class="p-0" md="auto">
@@ -27,6 +27,9 @@ export default {
   methods: {
     setAuthenticated (status) {
       this.authenticated = status
+    },
+    isAuthenticated () {
+      return localStorage.getItem('jwt') != null
     }
   }
 }

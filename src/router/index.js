@@ -18,7 +18,14 @@ const router = new Router({
     {
       path: '/login',
       name: 'Login',
-      component: LoginPage
+      component: LoginPage,
+      beforeEnter: (to, from, next) => {
+        if (localStorage.getItem('jwt') == null) {
+          next()
+        } else {
+          next({name: 'MainPage'})
+        }
+      }
     }
   ]
 })
@@ -32,11 +39,13 @@ router.beforeEach((to, from, next) => {
       })
     } else {
       let user = JSON.parse(localStorage.getItem('user'))
+
+      // If page requires admin then check
       if (to.matched.some(record => record.meta.isAdmin)) {
         if (user.isAdmin === 1) {
           next()
         } else {
-          next({name: 'userboard'})
+          next({name: 'MainPage'})
         }
       } else {
         next()
