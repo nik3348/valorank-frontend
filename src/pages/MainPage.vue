@@ -23,7 +23,6 @@ import RankCard from '../components/RankCard'
 import GameList from '../components/GameList'
 import ProfileCard from '../components/ProfileCard'
 
-// TODO: Need to add mobile support
 // TODO: Add footer with copyright and riot boilerplate
 export default {
   name: 'MainPage',

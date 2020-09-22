@@ -37,7 +37,7 @@ export default {
   border-color: #2b3e54;
   background-color: #2b3e54;
   text-align: start;
-  width: 340px;
+  width: 22.5vw;
   border-radius: 4px;
 }
 
@@ -45,7 +45,7 @@ export default {
   margin-left: 26px;
   margin-right: 5px;
   padding: 19px 5px 19px 15px;
-  height: 135px;
+  height: 10vw;
 }
 
 .gamemode {

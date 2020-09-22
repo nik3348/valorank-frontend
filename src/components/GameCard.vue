@@ -64,7 +64,7 @@ export default {
   font-size: 0.9vw;
   margin: 0 0 7px;
   border-radius: 4px;
-  height: 80px;
+  height: 5.5vw;
   transition: all .2s ease;
   overflow: hidden;
   padding-right: 5px;
@@ -82,8 +82,8 @@ export default {
 
 .tinge {
   display: inline-block;
-  width: 20px;
-  height: 80px;
+  width: 1.5vw;
+  height: 3vw;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@ export default {
 
 .kda {
   text-align: start;
-  width: 110px;
+  width: 5vw;
 }
 
 .secondaryColor {
@@ -100,11 +100,12 @@ export default {
 }
 
 .results {
-  width: 55px;
+  width: 5vw;
+  margin: 0 1vw;
 }
 
 .agentIcon {
-  height: 50px;
+  height: 3vw;
   margin: 2px;
 }
 
