@@ -37,7 +37,7 @@ export default {
   border-color: #2b3e54;
   background-color: #2b3e54;
   text-align: start;
-  width: 22.5vw;
+  width: 20vw;
   border-radius: 4px;
 }
 
@@ -45,19 +45,19 @@ export default {
   margin-left: 26px;
   margin-right: 5px;
   padding: 19px 5px 19px 15px;
-  height: 10vw;
+  height: 8.2vw;
 }
 
 .gamemode {
-  font-size: 1vw;
+  font-size: 0.8vw;
 }
 
 .rank {
   color: #ffc925;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 
 .msg {
-  font-size: 0.9vw;
+  font-size: 0.7vw;
 }
 </style>

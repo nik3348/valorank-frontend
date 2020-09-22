@@ -2,11 +2,9 @@
   <b-col class="p-0">
     <TheNavBar v-if="isAuthenticated()" @authenticated="setAuthenticated"/>
     <b-row id="app">
-      <b-col/>
-      <b-col class="p-0" md="auto">
+      <b-col class="p-0 col">
           <router-view @authenticated="setAuthenticated"/>
       </b-col>
-      <b-col/>
     </b-row>
   </b-col>
 </template>
@@ -53,5 +51,12 @@ body {
   background-size: cover;
   overflow-x: hidden;
   width: 100%
+}
+
+.col {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  margin: auto;
 }
 </style>

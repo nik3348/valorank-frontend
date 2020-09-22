@@ -72,7 +72,7 @@ export default {
 
 <style scoped>
 .agentIcon {
-  width: 3vw;
+  width: 2.5vw;
   margin: 5px;
 }
 
@@ -81,14 +81,14 @@ export default {
   border-color: #2b3e54;
   color: rgba(252, 208, 119, 0.6);
   text-align: center;
-  font-size: 0.9vw;
+  font-size: 0.7vw;
   margin: 3px 0;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .primary-color {
-  font-size: 1vw;
+  font-size: 0.8vw;
   color: rgb(252, 208, 119);;
 }
 
@@ -101,7 +101,7 @@ export default {
   margin-left: 1px;
   display:inline-block;
   width: 3px;
-  height: 3.5vw;
+  height: 3vw;
 }
 
 .acs {

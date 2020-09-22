@@ -61,10 +61,10 @@ export default {
   background-color: #2b3e54;
   border-color: #2b3e54;
   text-align: center;
-  font-size: 0.9vw;
+  font-size: 0.7vw;
   margin: 0 0 7px;
   border-radius: 4px;
-  height: 5.5vw;
+  height: 3.75vw;
   transition: all .2s ease;
   overflow: hidden;
   padding-right: 5px;
@@ -105,7 +105,7 @@ export default {
 }
 
 .agentIcon {
-  height: 3vw;
+  height: 2.25vw;
   margin: 2px;
 }
 

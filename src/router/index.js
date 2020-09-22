@@ -18,14 +18,14 @@ const router = new Router({
     {
       path: '/login',
       name: 'Login',
-      component: LoginPage,
-      beforeEnter: (to, from, next) => {
-        if (localStorage.getItem('jwt') == null) {
-          next()
-        } else {
-          next({name: 'MainPage'})
-        }
-      }
+      component: LoginPage
+      // beforeEnter: (to, from, next) => {
+      //   if (localStorage.getItem('jwt') == null) {
+      //     next()
+      //   } else {
+      //     next({name: 'MainPage'})
+      //   }
+      // }
     }
   ]
 })

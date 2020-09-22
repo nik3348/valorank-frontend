@@ -46,7 +46,7 @@ export default {
   text-align: center;
   font-size: 1vw;
   width: 100%;
-  height: 22.5vw;
+  height: 15vw;
   margin: 5px 0;
 }
 

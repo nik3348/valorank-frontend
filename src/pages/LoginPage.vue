@@ -1,6 +1,6 @@
 <template>
   <b-col>
-    <b-container class="login-card">
+    <b-container fluid class="login-card">
       <b-row>
         <div class="label-box"/>
         <div class="login">
@@ -98,9 +98,7 @@ export default {
   font-weight: lighter;
   background-color: rgb(33, 46, 62);;
   border-radius: 4px;
-  width: 800px;
-  height: 550px;
-  transform: translate(0%, 45%);
+  transform: translate(0%, 40%);
   overflow: hidden;
 }
 
@@ -109,9 +107,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 550px;
-  padding: 10px;
+  height: 27.5vw;
+  padding: 1vw;
 }
 
 .label-box {
@@ -119,18 +116,17 @@ export default {
   background-image: url("../assets/Vertical_jett.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 300px;
-  height: 550px;
+  width: 15vw;
 }
 
 .title {
   color: #ff4654;
-  font-size: 4vw;
+  font-size: 3vw;
   text-align: start;
 }
 
 .labels {
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   margin-top: 20px;
 }
 
@@ -145,7 +141,7 @@ export default {
 }
 
 .link {
-  font-size: 1vw;
+  font-size: 0.75vw;
   margin-top: 10px;
   align-items: end;
   text-align: end;
@@ -155,15 +151,15 @@ export default {
 
 .line {
   background-color: #ff4654;
-  width: 450px;
+  width: 25vw;
   height: 5px;
 }
 
 .register {
   padding: 10px;
   color: rgba(255, 255, 255, 0.25);
-  font-size: 1vw;
-  transform: translate(0%, 250%);
+  font-size: 0.75vw;
+  transform: translate(0%, 4vw);
 }
 
 .register-link {

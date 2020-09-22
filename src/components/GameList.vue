@@ -1,6 +1,5 @@
 <template>
   <b-col class="p-0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <GameCard v-for="game in games" :key="game.name" :game="game"/>
     <b-button/>
   </b-col>
