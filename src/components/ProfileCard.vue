@@ -44,7 +44,7 @@ export default {
 .profile-card {
   background-color: lightgray;
   text-align: center;
-  font-size: 13px;
+  font-size: 1vw;
   width: 100%;
   height: 300px;
   margin: 5px 0;

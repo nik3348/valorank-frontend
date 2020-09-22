@@ -81,7 +81,7 @@ export default {
   border-color: #2b3e54;
   color: rgba(252, 208, 119, 0.6);
   text-align: center;
-  font-size: 13px;
+  font-size: 0.9vw;
   width: 340px;
   margin: 3px 0;
   border-radius: 4px;
@@ -89,7 +89,7 @@ export default {
 }
 
 .primary-color {
-  font-size: 16px;
+  font-size: 1vw;
   color: rgb(252, 208, 119);;
 }
 

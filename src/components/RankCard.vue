@@ -49,15 +49,15 @@ export default {
 }
 
 .gamemode {
-  font-size: 13px;
+  font-size: 1vw;
 }
 
 .rank {
   color: #ffc925;
-  font-size: 25px;
+  font-size: 1.5vw;
 }
 
 .msg {
-  font-size: 13px;
+  font-size: 0.9vw;
 }
 </style>

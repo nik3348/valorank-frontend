@@ -125,12 +125,12 @@ export default {
 
 .title {
   color: #ff4654;
-  font-size: 60px;
+  font-size: 4vw;
   text-align: start;
 }
 
 .labels {
-  font-size: 25px;
+  font-size: 1.5vw;
   margin-top: 20px;
 }
 
@@ -145,7 +145,7 @@ export default {
 }
 
 .link {
-  font-size: 15px;
+  font-size: 1vw;
   margin-top: 10px;
   align-items: end;
   text-align: end;
@@ -162,8 +162,8 @@ export default {
 .register {
   padding: 10px;
   color: rgba(255, 255, 255, 0.25);
-  font-size: 14px;
-  transform: translate(0%, 225%);
+  font-size: 1vw;
+  transform: translate(0%, 250%);
 }
 
 .register-link {

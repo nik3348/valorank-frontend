@@ -61,7 +61,7 @@ export default {
   background-color: #2b3e54;
   border-color: #2b3e54;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.9vw;
   margin: 0 0 7px;
   border-radius: 4px;
   height: 80px;
