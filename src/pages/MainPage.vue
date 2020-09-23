@@ -5,12 +5,12 @@
         <ProfileCard/>
       </b-col>
     </b-row>
-    <b-row style="padding: 0 1px ">
-      <b-col class="pr-1 pl-3" cols="2" md="auto">
+    <b-row style="padding: 0 2px">
+      <b-col class="pr-1 pl-3" cols="4">
         <RankCard/>
         <AgentList/>
       </b-col>
-      <b-col class="pl-1 pr-3">
+      <b-col class="pr-3" cols="8">
         <GameList/>
       </b-col>
     </b-row>

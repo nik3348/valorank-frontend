@@ -1,7 +1,9 @@
 <template>
-  <b-row align-v="center" class="game-card">
-    <div class="tinge secondaryColor">{{ capitalizeFirstLetter(game.map) }}</div>
-    <b-col class="results p-0">
+  <b-row align-v="center" class="game-card" no-gutters>
+    <b-col md="auto">
+      <div class="tinge secondaryColor">{{ capitalizeFirstLetter(game.map) }}</div>
+    </b-col>
+    <b-col class="mx-2 p-0" cols="1">
       <span :class="[isWin() ? 'victory' : 'defeat']">{{ game.gamemode }}</span>
       <br/>
       <span :style="{opacity: isWin() ? 1 : 0.6}">{{ game.wins }}</span>
@@ -13,30 +15,28 @@
     <b-col class="p-0" md="auto">
       <img :src="require('../assets/agents/' + game.agent + '.png')" alt="agent" class="agentIcon">
     </b-col>
-    <b-col class="kda">
-      <b-row class="px-2">
+    <b-col class="kda pl-1" cols="*">
         <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
-      </b-row>
-      <b-row class="px-2" align-h="between">
         <b-badge v-b-tooltip.hover title="Match MVP" v-if="game.mmvp" variant="danger">M-MVP</b-badge>
         <b-badge v-b-tooltip.hover title="Team MVP" v-else-if="game.tmvp" variant="warning">T-MVP</b-badge>
-      </b-row>
     </b-col>
-    <img
+    <b-col>
+      <img
       v-for="player in game.friend"
       :key="player"
       :src="require('../assets/agents/' + player + '.png')"
       alt="agent"
       class="agentIcon"
     >
-    <span>vs</span>
-    <img
-      v-for="player in game.enemy"
-      :key="player"
-      :src="require('../assets/agents/' + player + '.png')"
-      alt="agent"
-      class="agentIcon"
-    >
+      <span>vs</span>
+      <img
+        v-for="player in game.enemy"
+        :key="player"
+        :src="require('../assets/agents/' + player + '.png')"
+        alt="agent"
+        class="agentIcon"
+      >
+    </b-col>
   </b-row>
 </template>
 
@@ -61,10 +61,10 @@ export default {
   background-color: #2b3e54;
   border-color: #2b3e54;
   text-align: center;
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   margin: 0 0 7px;
   border-radius: 4px;
-  height: 3.75vw;
+  height: 4.25vw;
   transition: all .2s ease;
   overflow: hidden;
   padding-right: 5px;
@@ -82,8 +82,6 @@ export default {
 
 .tinge {
   display: inline-block;
-  width: 1.5vw;
-  height: 3vw;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   background-repeat: no-repeat;
@@ -97,11 +95,6 @@ export default {
 
 .secondaryColor {
   color: rgba(252, 208, 119, 0.6);
-}
-
-.results {
-  width: 5vw;
-  margin: 0 1vw;
 }
 
 .agentIcon {

@@ -1,11 +1,11 @@
 <template>
-  <b-row align-h="center" align-v="center" class="profile-card">
+  <div class="profile-card">
     <div class="banner"/>
     <div class="profile-name">
       <h1>{{ name }}</h1>
     </div>
     <div class="edit-icon"/>
-  </b-row>
+  </div>
 </template>
 
 <script>
@@ -34,7 +34,8 @@ export default {
   z-index: 2;
   padding: 20px;
   text-align: center;
-  transition: all .2s ease
+  transition: all .2s ease;
+  margin: auto;
 }
 
 .banner:hover + .profile-name {

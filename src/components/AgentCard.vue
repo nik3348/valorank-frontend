@@ -1,7 +1,9 @@
 <template>
   <b-row align-v="center" class="stats-card">
-    <div class="tinge" :style="{backgroundColor: getAgentColor(agent.name)}"/>
-    <img :src="require('../assets/agents/' + agent.name + '.png')" alt="agent" class="agentIcon">
+    <b-col cols="*">
+      <div class="tinge" :style="{backgroundColor: getAgentColor(agent.name)}"/>
+    </b-col>
+    <b-col><img :src="require('../assets/agents/' + agent.name + '.png')" alt="agent" class="agentIcon"></b-col>
     <b-col class="name p-0">
       <span :style="{color: getAgentColor(agent.name)}" class="primary-color">
         {{ capitalizeFirstLetter(agent.name) }}
@@ -11,7 +13,7 @@
           {{ agent.combatScore }}
       </span>
     </b-col>
-    <b-col class="p-0">
+    <b-col class="p-0 text-center">
       <span class="primary-color">{{ agent.kills }} / {{ agent.deaths }} / {{ agent.assists }}</span>
       <br>
       {{ getKDAR(agent) }} : 1 <span class="secondaryColor">KDA</span>
@@ -81,14 +83,15 @@ export default {
   border-color: #2b3e54;
   color: rgba(252, 208, 119, 0.6);
   text-align: center;
-  font-size: 0.7vw;
+  font-size: 0.8vw;
+  width: 20vw;
   margin: 3px 0;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .primary-color {
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   color: rgb(252, 208, 119);;
 }
 
@@ -109,6 +112,12 @@ export default {
 }
 
 .name {
+  width: 4vw;
   text-align: start;
+}
+
+.games {
+  width: 7vw;
+  margin: 1px;
 }
 </style>

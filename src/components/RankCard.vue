@@ -43,21 +43,20 @@ export default {
 
 .rankImage {
   margin-left: 26px;
-  margin-right: 5px;
   padding: 19px 5px 19px 15px;
-  height: 8.2vw;
+  height: 8vw;
 }
 
 .gamemode {
-  font-size: 0.8vw;
+  font-size: 1.1vw;
 }
 
 .rank {
   color: #ffc925;
-  font-size: 1.3vw;
+  font-size: 1.5vw;
 }
 
 .msg {
-  font-size: 0.7vw;
+  font-size: 0.9vw;
 }
 </style>
