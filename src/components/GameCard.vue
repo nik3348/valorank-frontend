@@ -1,6 +1,6 @@
 <template>
   <b-row align-v="center" class="game-card" no-gutters>
-    <b-col md="auto">
+    <b-col cols="*">
       <div class="tinge secondaryColor">{{ capitalizeFirstLetter(game.map) }}</div>
     </b-col>
     <b-col class="mx-2 p-0" cols="1">
@@ -12,26 +12,32 @@
       <br/>
       <span :class="[isWin() ? 'victory' : 'defeat']">{{ isWin() ? 'Victory' : 'Defeat' }}</span>
     </b-col>
-    <b-col class="p-0" md="auto">
+    <b-col class="p-0" cols="*">
       <img :src="require('../assets/agents/' + game.agent + '.png')" alt="agent" class="agentIcon">
     </b-col>
-    <b-col class="kda pl-1" cols="*">
-        <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
-        <b-badge v-b-tooltip.hover title="Match MVP" v-if="game.mmvp" variant="danger">M-MVP</b-badge>
-        <b-badge v-b-tooltip.hover title="Team MVP" v-else-if="game.tmvp" variant="warning">T-MVP</b-badge>
+    <b-col class="kda pl-2" cols="*">
+      <span v-b-tooltip.hover title="KDA">{{ game.kills }} / {{ game.deaths }} / {{ game.assists }}</span>
+      <b-badge v-b-tooltip.hover title="Match MVP" v-if="game.mmvp" variant="danger">M-MVP</b-badge>
+      <b-badge v-b-tooltip.hover title="Team MVP" v-else-if="game.tmvp" variant="warning">T-MVP</b-badge>
     </b-col>
-    <b-col>
-      <img
+    <b-col
+      cols="*"
       v-for="player in game.friend"
       :key="player"
-      :src="require('../assets/agents/' + player + '.png')"
-      alt="agent"
-      class="agentIcon"
     >
-      <span>vs</span>
       <img
-        v-for="player in game.enemy"
-        :key="player"
+        :src="require('../assets/agents/' + player + '.png')"
+        alt="agent"
+        class="agentIcon"
+      >
+    </b-col>
+    <b-col cols="*" class="m-1 text-center"><span>vs</span></b-col>
+    <b-col
+      cols="*"
+      v-for="player in game.enemy"
+      :key="player"
+    >
+      <img
         :src="require('../assets/agents/' + player + '.png')"
         alt="agent"
         class="agentIcon"
@@ -61,7 +67,7 @@ export default {
   background-color: #2b3e54;
   border-color: #2b3e54;
   text-align: center;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   margin: 0 0 7px;
   border-radius: 4px;
   height: 4.25vw;
@@ -81,7 +87,6 @@ export default {
 }
 
 .tinge {
-  display: inline-block;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   background-repeat: no-repeat;
@@ -98,7 +103,7 @@ export default {
 }
 
 .agentIcon {
-  height: 2.25vw;
+  height: 3.5vw;
   margin: 2px;
 }
 
@@ -112,5 +117,47 @@ export default {
 
 .score {
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 1200px) {
+  .agentIcon {
+    height: 3.25vw;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .agentIcon {
+    height: 2.8vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .agentIcon {
+    height: 2.6vw;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .agentIcon {
+    height: 2.4vw;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .agentIcon {
+    height: 2.2vw;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .agentIcon {
+    height: 2.1vw;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .agentIcon {
+    height: 1.9vw;
+  }
 }
 </style>

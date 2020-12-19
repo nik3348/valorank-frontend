@@ -1,8 +1,8 @@
 <template>
   <b-col class="p-0">
     <TheNavBar v-if="isAuthenticated()" @authenticated="setAuthenticated"/>
-    <b-row id="app">
-      <b-col class="p-0 center" md="auto">
+    <b-row id="app" class="justify-content-md-center">
+      <b-col class="p-0" md="auto">
           <router-view @authenticated="setAuthenticated"/>
       </b-col>
     </b-row>
@@ -50,9 +50,5 @@ body {
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
-}
-
-.center {
-  margin: auto;
 }
 </style>

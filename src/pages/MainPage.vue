@@ -1,16 +1,16 @@
 <template>
-  <b-col class="cover">
+  <b-col class="cover" cols="12">
     <b-row>
       <b-col class="banner">
         <ProfileCard/>
       </b-col>
     </b-row>
-    <b-row style="padding: 0 2px">
-      <b-col class="pr-1 pl-3" cols="4">
+    <b-row style="padding: 0 4px" no-gutters>
+      <b-col class="pr-1" cols="4">
         <RankCard/>
         <AgentList/>
       </b-col>
-      <b-col class="pr-3" cols="8">
+      <b-col class="pl-1">
         <GameList/>
       </b-col>
     </b-row>
